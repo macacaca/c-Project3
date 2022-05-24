@@ -9,12 +9,17 @@ const bool checkCard(string cards[], string card);
 
 int main()
 {
-
+	string cards[5];
     srand(time(0));
     for(int i = 0; i < 5; i++)
     {
-       string card = rankCard()+", "+suitCard();
-       cout << "Karta "<< i+1 <<": (" << card <<")"<< endl;
+        string card = rankCard()+", "+suitCard();
+        if(i > 0 && checkCard(cards, card))
+        {
+            card = rankCard()+", "+suitCard();
+        }
+		cout << "Karta "<< i+1 <<": (" << card <<")"<< endl;
+		cards[i] = card;
     }
 }
 
