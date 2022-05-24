@@ -6,10 +6,10 @@ using namespace std;
 const string rankCard(), suitCard();
 const bool checkCard(string cards[], string card);
 
-
 int main()
 {
-	string cards[5];
+   
+    string cards[5];
     srand(time(0));
     for(int i = 0; i < 5; i++)
     {
@@ -18,8 +18,8 @@ int main()
         {
             card = rankCard()+", "+suitCard();
         }
-		cout << "Karta "<< i+1 <<": (" << card <<")"<< endl;
-		cards[i] = card;
+       cout << "Karta "<< i+1 <<": (" << card <<")"<< endl;
+       cards[i] = card;
     }
 }
 
@@ -39,9 +39,9 @@ const string rankCard() {
     case 11: return "Dzandar";
     case 12: return "Dama";
     case 13: return "Pop";
-    default: string str= to_string(rank + 48);
+    default: string str= to_string(rank + 48);  
     return 0;
-    }
+    }   
 }
 
 const string suitCard() {
@@ -65,8 +65,6 @@ const bool checkCard(string cards[], string card)
     }
      return hasCard;
 }
-
-
 
 
 
