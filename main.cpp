@@ -4,6 +4,7 @@ using namespace std;
 
 // Function Declaration
 const string rankCard(), suitCard();
+const bool checkCard(string cards[], string card);
 
 
 int main()
@@ -47,6 +48,17 @@ const string suitCard() {
     case 4: return "Pik";
     default: return 0;
     }
+}
+
+const bool checkCard(string cards[], string card)
+{
+    bool hasCard = false;
+     for(int i = 0; i < 5; i++){
+        if(cards[i] == card){
+            hasCard = true;
+        }
+    }
+     return hasCard;
 }
 
 
